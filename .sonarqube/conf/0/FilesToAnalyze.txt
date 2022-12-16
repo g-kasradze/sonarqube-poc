@@ -1,0 +1,11 @@
+﻿C:\Users\guram\Desktop\poc\Sonarqube.POC\Sonarqube.POC.API\Controllers\WeatherForecastController.cs
+C:\Users\guram\Desktop\poc\Sonarqube.POC\Sonarqube.POC.API\Program.cs
+C:\Users\guram\Desktop\poc\Sonarqube.POC\Sonarqube.POC.API\WeatherForecast.cs
+C:\Users\guram\Desktop\poc\Sonarqube.POC\Sonarqube.POC.API\obj\Debug\net6.0\Sonarqube.POC.API.GlobalUsings.g.cs
+C:\Users\guram\Desktop\poc\Sonarqube.POC\Sonarqube.POC.API\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+C:\Users\guram\Desktop\poc\Sonarqube.POC\Sonarqube.POC.API\obj\Debug\net6.0\Sonarqube.POC.API.AssemblyInfo.cs
+C:\Users\guram\Desktop\poc\Sonarqube.POC\Sonarqube.POC.API\obj\Debug\net6.0\Sonarqube.POC.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\guram\Desktop\poc\Sonarqube.POC\Sonarqube.POC.API\appsettings.Development.json
+C:\Users\guram\Desktop\poc\Sonarqube.POC\Sonarqube.POC.API\appsettings.json
+C:\Users\guram\Desktop\poc\Sonarqube.POC\Sonarqube.POC.API\Properties\launchSettings.json
+C:\Users\guram\Desktop\poc\Sonarqube.POC\Sonarqube.POC.API\obj\Debug\net6.0\apphost.exe

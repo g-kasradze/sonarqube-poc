@@ -1,0 +1,6 @@
+projectKey=pos-project
+serverUrl=http://3.124.191.139:9090
+serverVersion=8.9.2.46101
+dashboardUrl=http://3.124.191.139:9090/dashboard?id=pos-project
+ceTaskId=AYUaN3V7uiyvRrNe-Uaq
+ceTaskUrl=http://3.124.191.139:9090/api/ce/task?id=AYUaN3V7uiyvRrNe-Uaq
