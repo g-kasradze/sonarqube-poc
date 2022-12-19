@@ -20,6 +20,8 @@ jobs:
         fetch-depth: 0
     - name: Project Build
       run: dotnet build
+    - name: Listing files
+      run: ls -a
     - name: SonarQube Scan
       uses: kitabisa/sonarqube-action@v1.2.0
       with:
