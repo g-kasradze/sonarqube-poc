@@ -32,13 +32,11 @@ jobs:
           restore-keys: ${{ runner.os }}-sonar-scanner
       - name: Install SonarQube scanner
         if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
-        run: |
-          New-Item -Path .\.sonar\scanner -ItemType Directory
-          dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
+        run: dotnet tool install --global dotnet-sonarscanner
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"${{ secrets.SONARQUBE_PROJECT }}" /d:sonar.login="${{ secrets.SONARQUBE_TOKEN }}" /d:sonar.host.url="${{ secrets.SONARQUBE_HOST }}"
+          dotnet sonarscanner begin /k:${{ secrets.SONARQUBE_PROJECT }} /d:sonar.host.url=${{ secrets.SONARQUBE_HOST }}  /d:sonar.login=${{ secrets.SONARQUBE_TOKEN }}
           dotnet build
-          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONARQUBE_TOKEN }}"
+          dotnet sonarscanner end /d:sonar.login=${{ secrets.SONARQUBE_TOKEN }}
