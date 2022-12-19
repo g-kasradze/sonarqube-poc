@@ -26,11 +26,3 @@ jobs:
       run: dotnet build
     - name: Scanner end
       run: dotnet sonarscanner end /d:sonar.login=${{ secrets.SONARQUBE_TOKEN }}
-    - name: Listing files
-      run: ls -a
-    - name: SonarQube Scan
-      uses: kitabisa/sonarqube-action@v1.2.0
-      with:
-        host: ${{ secrets.SONARQUBE_HOST }}
-        login: ${{ secrets.SONARQUBE_TOKEN }}
-        projectKey: ${{ secrets.SONARQUBE_PROJECT }}
