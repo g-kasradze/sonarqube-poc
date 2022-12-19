@@ -19,7 +19,10 @@ jobs:
         # Disabling shallow clone is recommended for improving relevancy of reporting
         fetch-depth: 0
     - name: Project Build
-      run: dotnet build
+      run: dotnet tool install --global dotnet-sonarscanner
+           dotnet sonarscanner begin /k:"as" /d:sonar.host.url="http://3.76.182.220:9090"  /d:sonar.login="d2dfeef27b69a9028386a7bf95c4e1e58e996ed3"
+           dotnet build
+           dotnet sonarscanner end /d:sonar.login="d2dfeef27b69a9028386a7bf95c4e1e58e996ed3"
     - name: Listing files
       run: ls -a
     - name: SonarQube Scan
