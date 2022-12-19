@@ -21,11 +21,11 @@ jobs:
     - name: Install tool
       run: dotnet tool install --global dotnet-sonarscanner
     - name: Sonar scan
-      run: dotnet sonarscanner begin /k:"as" /d:sonar.host.url="http://3.76.182.220:9090"  /d:sonar.login="d2dfeef27b69a9028386a7bf95c4e1e58e996ed3"
+      run: dotnet sonarscanner begin /k:${{ secrets.SONARQUBE_PROJECT }} /d:sonar.host.url=${{ secrets.SONARQUBE_HOST }}  /d:sonar.login=${{ secrets.SONARQUBE_TOKEN }}
     - name: Build
       run: dotnet build
     - name: Scanner end
-      run: dotnet sonarscanner end /d:sonar.login="d2dfeef27b69a9028386a7bf95c4e1e58e996ed3"
+      run: dotnet sonarscanner end /d:sonar.login=${{ secrets.SONARQUBE_TOKEN }}
     - name: Listing files
       run: ls -a
     - name: SonarQube Scan
