@@ -18,14 +18,14 @@ jobs:
       - name: Cache SonarQube packages
         uses: actions/cache@v2
         with:
-          path: ~/ #full path to packages cache
+          path: ~/ #path to packages cache
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
       - name: Cache SonarQube scanner
         id: cache-sonar-scanner
         uses: actions/cache@v2
         with:
-          path: ~/ #full path to scanner cache
+          path: ~/ #path to scanner cache
           key: ${{ runner.os }}-sonar-scanner
           restore-keys: ${{ runner.os }}-sonar-scanner
       - name: Install SonarQube scanner
